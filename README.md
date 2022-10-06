@@ -90,7 +90,7 @@ TradingEnv is an abstract class which inherits `gym.Env`. This class aims to pro
 >
 > `_update_profit`: Calculates and updates total profit which the RL agent has achieved so far. Profit indicates the amount of units of currency you have achieved by starting with *1.0* unit (Profit = FinalMoney / StartingMoney).
 >
-> `max_possible_profit`: The maximum possible profit that an RL agent can obtain regardless of trade fees.
+> `max_possible_profit`: The maximum possible profit that an RL agent can obtain regardless of trade fees.RL代理在不考虑交易费用的情况下可以获得的最大可能利润。
 
 ### ForexEnv
 This is a concrete class which inherits TradingEnv and implements its abstract methods. Also, it has some specific properties for the *FOREX* market. For more information refer to the [source code](https://github.com/AminHP/gym-anytrading/blob/master/gym_anytrading/envs/forex_env.py).
