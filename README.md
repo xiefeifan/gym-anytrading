@@ -88,7 +88,7 @@ TradingEnv is an abstract class which inherits `gym.Env`. This class aims to pro
 >
 > `_calculate_reward`: The reward function for the RL agent.
 >
-> `_update_profit`: Calculates and updates total profit which the RL agent has achieved so far. Profit indicates the amount of units of currency you have achieved by starting with *1.0* unit (Profit = FinalMoney / StartingMoney).
+> `_update_profit`: Calculates and updates total profit which the RL agent has achieved so far. Profit indicates the amount of units of currency you have achieved by starting with *1.0* unit (Profit = FinalMoney / StartingMoney).计算并更新RL代理迄今为止实现的总利润。初始总利润为1.总利润=最终资金/初始资金。
 >
 > `max_possible_profit`: The maximum possible profit that an RL agent can obtain regardless of trade fees.RL代理在不考虑交易费用的情况下可以获得的最大可能利润。
 
