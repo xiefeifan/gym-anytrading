@@ -66,9 +66,9 @@ TradingEnv is an abstract class which inherits `gym.Env`. This class aims to pro
 >
 > `observation_space`: The *Gym observation_space* property. Each observation is a window on `signal_features` from index **current_tick - window_size + 1** to **current_tick**. So `_start_tick` of the environment would be equal to `window_size`. In addition, initial value for `_last_trade_tick` is **window_size - 1** .
 >
-> `shape`: Shape of a single observation.
+> `shape`: Shape of a single observation.单个observation的shape
 >
-> `history`: Stores the information of all steps.
+> `history`: Stores the information of all steps.存储所有steps的信息
 
 * Methods:
 > `seed`: Typical *Gym seed* method.
@@ -92,7 +92,7 @@ TradingEnv is an abstract class which inherits `gym.Env`. This class aims to pro
 >
 > `max_possible_profit`: The maximum possible profit that an RL agent can obtain regardless of trade fees.RL代理在不考虑交易费用的情况下可以获得的最大可能利润。
 
-### ForexEnv
+### ForexEnv外汇环境
 This is a concrete class which inherits TradingEnv and implements its abstract methods. Also, it has some specific properties for the *FOREX* market. For more information refer to the [source code](https://github.com/AminHP/gym-anytrading/blob/master/gym_anytrading/envs/forex_env.py).
 
 * Properties:
