@@ -84,9 +84,9 @@ TradingEnv is an abstract class which inherits `gym.Env`. This class aims to pro
 > `close`: Typical *Gym close* method.
 
 * Abstract Methods:
-> `_process_data`: It is called in the constructor and returns `prices` and `signal_features` as a tuple. In different trading markets, different features need to be obtained. So this method enables our TradingEnv to be a general-purpose environment and specific features can be returned for specific environments such as *FOREX*, *Stocks*, etc.
+> `_process_data`: It is called in the constructor and returns `prices` and `signal_features` as a tuple. In different trading markets, different features need to be obtained. So this method enables our TradingEnv to be a general-purpose environment and specific features can be returned for specific environments such as *FOREX*, *Stocks*, etc.在step及reset函数中调用，每调用一次从db中获取一组observation数据，并以tuple形式返回当前prices及signal_features
 >
-> `_calculate_reward`: The reward function for the RL agent.
+> `_calculate_reward`: The reward function for the RL agent.RL代理的奖励函数
 >
 > `_update_profit`: Calculates and updates total profit which the RL agent has achieved so far. Profit indicates the amount of units of currency you have achieved by starting with *1.0* unit (Profit = FinalMoney / StartingMoney).计算并更新RL代理迄今为止实现的总利润。初始总利润为1.总利润=最终资金/初始资金。
 >
